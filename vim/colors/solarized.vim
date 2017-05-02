@@ -1,1 +1,1 @@
-../bundle/vim-colors-solarized/colors/solarized.vim
+/home/jett/.vimconfig/vim/bundle/vim-colors-solarized/colors/solarized.vim
