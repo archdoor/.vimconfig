@@ -21,5 +21,12 @@ ln -sfT ${CUR_DIR}/vim ~/.vim
 echo "config the xfce4-terminal..."
 cp -f ${CUR_DIR}/vim/terminal/terminalrc ~/.config/xfce4/terminal/
 
+echo "config the xfce4-terminal dir-colors..."
+if [ -d  ${CUR_DIR}/vim/bundle/dircolors-solarized ]; then
+	eval `dircolors ${CUR_DIR}/vim/bundle/dircolors-solarized/dircolors.256dark`
+else
+	echo -e "\tPlugin dir-colors is not exist!"
+fi
+
 echo "all configs done!"
 

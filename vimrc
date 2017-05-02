@@ -104,7 +104,7 @@ Plugin 'seebi/dircolors-solarized'
 Plugin 'altercation/vim-colors-solarized'
 syntax enable
 set background=dark
-let g:solarized_termcolors=256
+set t_Co=256
 colorscheme solarized
 endif
 
