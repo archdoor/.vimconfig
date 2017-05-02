@@ -18,5 +18,8 @@ ln -sfT ${CUR_DIR}/gvimrc ~/.gvimrc
 echo "config the softlink .vim..."
 ln -sfT ${CUR_DIR}/vim ~/.vim
 
+echo "config the xfce4-terminal..."
+cp -f ${CUR_DIR}/vim/terminal/terminalrc ~/.config/xfce4/terminal/
+
 echo "all configs done!"
 
