@@ -59,54 +59,58 @@ set termencoding=utf-8
 "2.Github 其他 用户插件：Plugin 'username/plugin'
 "3.非 Github 用户插件：Plugin ''git://git.wincent.com/command-t.git''
 "4.本地插件：Plugin 'file:///home/gmarik/path/to/plugin'
+if 1
+
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#begin()  
+
+Plugin 'gmarik/vundle' 
+
+if 1
+Plugin 'Lokaltog/vim-powerline'
+set laststatus=2
+set guifont=PowerlineSymbols\ for\ Powerline
+let g:Powerline_symbols = 'unicode'
+set noshowmode
+set t_Co=256
+endif
+
 if 0
-	set nocompatible
-	filetype off
-	set rtp+=~/.vim/bundle/vundle
-	call vundle#begin()  
-	
-	Plugin 'gmarik/vundle' 
-	
-	if 0
-	Plugin 'Lokaltog/vim-powerline'
-	set laststatus=2
-	set guifont=PowerlineSymbols\ for\ Powerline
-	let g:Powerline_symbols = 'unicode'
-	set noshowmode
-	set t_Co=256
-	endif
-	
-	if 0
-	Plugin 'Valloric/YouCompleteMe'
-	let g:ycm_confirm_extra_conf=0
-	let g:ycm_enable_diagnostic_signs = 0
-	let g:ycm_enable_diagnostic_highlighting = 0
-	let g:ycm_echo_current_diagnostic = 0
-	let g:ycm_autoclose_preview_window_after_completion=1
-	let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-	nnoremap gc :YcmCompleter GoToDeclaration<CR>
-	nnoremap gd :YcmCompleter GoToDefinition<CR>
-	nnoremap go :YcmCompleter GoToDefinitionElseDeclaration<CR>
-	endif
-	
-	if 0
-	Plugin 'vimwiki/vimwiki'
-	endif
-	
-	if 0
-	Plugin 'Mark'
-	endif
+Plugin 'Valloric/YouCompleteMe'
+let g:ycm_confirm_extra_conf=0
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_echo_current_diagnostic = 0
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+nnoremap gc :YcmCompleter GoToDeclaration<CR>
+nnoremap gd :YcmCompleter GoToDefinition<CR>
+nnoremap go :YcmCompleter GoToDefinitionElseDeclaration<CR>
+endif
 
-	if 0
-	syntax enable
-	set background=dark
-	colorscheme custom
-	endif
+if 1 
+Plugin 'vimwiki/vimwiki'
+endif
 
-	
-	call vundle#end()
-	filetype on 
-	filetype plugin on
-	filetype plugin indent on
+if 1
+Plugin 'Mark'
+endif
+
+if 1
+Plugin 'sgerrand/xfce4-terminal-colors-solarized'
+Plugin 'seebi/dircolors-solarized'
+Plugin 'altercation/vim-colors-solarized'
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
+endif
+
+call vundle#end()
+filetype on 
+filetype plugin on
+filetype plugin indent on
 	
 endif
