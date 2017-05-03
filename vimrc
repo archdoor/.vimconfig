@@ -99,11 +99,11 @@ Plugin 'Mark'
 endif
 
 if 1
-"Plugin 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 "syntax enable
 "set background=dark
 "set t_Co=256
-"colorscheme solarized
+colorscheme solarized
 endif
 
 call vundle#end()
