@@ -99,7 +99,6 @@ Plugin 'Mark'
 endif
 
 if 1
-Plugin 'sgerrand/xfce4-terminal-colors-solarized'
 Plugin 'seebi/dircolors-solarized'
 "Plugin 'altercation/vim-colors-solarized'
 "syntax enable
