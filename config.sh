@@ -17,7 +17,8 @@ echo "配置 .vim..."
 ln -sfT ${CUR_DIR}/vim ~/.vim
 
 echo "配置 xfce4-terminal..."
-cp -f ${CUR_DIR}/vim/xfce4-terminal/terminalrc ~/.config/xfce4/terminal/
+grep -f ${CUR_DIR}/vim/xfce4-terminal/terminalrc ~/.config/xfce4/terminal/terminalrc > /dev/null || \
+cat ${CUR_DIR}/vim/xfce4-terminal/terminalrc > ~/.config/xfce4/terminal/terminalrc
 
 echo "配置 vim color..."
 if [ -d  ${CUR_DIR}/vim/bundle/vim-colors-solarized ]; then
@@ -26,16 +27,15 @@ else
 	echo -e "\tPlugin vim-colors-solarized is not exist!"
 fi
 
-echo "配置 xfce4-terminal dir-colors..."
-if [ -d  ${CUR_DIR}/vim/bundle/dircolors-solarized ]; then
-	grep "DIR_COLORS" ~/.bashrc >> /dev/null ||\
-	echo -e "\
-	\n# [DIR_COLORS]\
-	\neval \`dircolors ~/.vim/bundle/dircolors-solarized/dircolors.256dark\`\
-	\n" >> ~/.bashrc
-else
-	echo -e "\tPlugin dir-colors is not exist!"
-fi
+echo "配置 dir-colors..."
+grep "DIR_COLORS" ~/.bashrc >> /dev/null ||\
+echo -e "\
+# [DIR_COLORS]\n\
+eval \`dircolors ~/.vim/dircolors/dircolors.256dark\`\n\
+# val \`dircolors ~/.vim/dircolors/dircolors.ansi-dark\`\n\
+# val \`dircolors ~/.vim/dircolors/dircolors.ansi-light\`\n\
+# val \`dircolors ~/.vim/dircolors/dircolors.ansi-universal\`\n\
+" >> ~/.bashrc
 
 echo "配置完成！"
 

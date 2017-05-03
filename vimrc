@@ -99,7 +99,6 @@ Plugin 'Mark'
 endif
 
 if 1
-Plugin 'seebi/dircolors-solarized'
 "Plugin 'altercation/vim-colors-solarized'
 "syntax enable
 "set background=dark
