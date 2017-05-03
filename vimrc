@@ -68,7 +68,7 @@ call vundle#begin()
 
 Plugin 'gmarik/vundle' 
 
-if 1
+if 0
 Plugin 'Lokaltog/vim-powerline'
 set laststatus=2
 set guifont=PowerlineSymbols\ for\ Powerline
@@ -101,11 +101,11 @@ endif
 if 1
 Plugin 'sgerrand/xfce4-terminal-colors-solarized'
 Plugin 'seebi/dircolors-solarized'
-Plugin 'altercation/vim-colors-solarized'
-syntax enable
-set background=dark
-set t_Co=256
-colorscheme solarized
+"Plugin 'altercation/vim-colors-solarized'
+"syntax enable
+"set background=dark
+"set t_Co=256
+"colorscheme solarized
 endif
 
 call vundle#end()
