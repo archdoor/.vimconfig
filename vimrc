@@ -68,7 +68,7 @@ call vundle#begin()
 
 Plugin 'gmarik/vundle' 
 
-if 0
+if 1
 Plugin 'Lokaltog/vim-powerline'
 set laststatus=2
 set guifont=PowerlineSymbols\ for\ Powerline

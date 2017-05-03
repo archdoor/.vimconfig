@@ -25,9 +25,9 @@ grep "DIR_COLORS" ~/.bashrc >> /dev/null ||\
 echo -e "\
 # [DIR_COLORS]\n\
 eval \`dircolors ~/.vim/dircolors/dircolors.256dark\`\n\
-# val \`dircolors ~/.vim/dircolors/dircolors.ansi-dark\`\n\
-# val \`dircolors ~/.vim/dircolors/dircolors.ansi-light\`\n\
-# val \`dircolors ~/.vim/dircolors/dircolors.ansi-universal\`\n\
+# eval \`dircolors ~/.vim/dircolors/dircolors.ansi-dark\`\n\
+# eval \`dircolors ~/.vim/dircolors/dircolors.ansi-light\`\n\
+# eval \`dircolors ~/.vim/dircolors/dircolors.ansi-universal\`\n\
 " >> ~/.bashrc
 
 echo "配置 vim color..."
