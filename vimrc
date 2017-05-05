@@ -77,7 +77,7 @@ set noshowmode
 set t_Co=256
 endif
 
-if 0
+if 1
 Plugin 'Valloric/YouCompleteMe'
 let g:ycm_confirm_extra_conf=0
 let g:ycm_enable_diagnostic_signs = 0
@@ -100,10 +100,16 @@ endif
 
 if 1
 Plugin 'altercation/vim-colors-solarized'
-"syntax enable
-"set background=dark
-"set t_Co=256
+syntax enable
+set background=dark
+set t_Co=256
 colorscheme solarized
+endif
+
+if 1
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'suan/vim-instant-markdown'
 endif
 
 call vundle#end()
