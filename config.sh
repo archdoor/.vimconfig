@@ -23,7 +23,7 @@ cat ${CUR_DIR}/vim/xfce4-terminal/terminalrc > ~/.config/xfce4/terminal/terminal
 echo "[配置 PS1...]"
 grep "\[PS1\]" ~/.bashrc >> /dev/null ||\
 (echo -e "\n# [PS1]" >> ~/.bashrc; \
-echo "PS1='\e[32m[\u@\h \W]\$\e[0m '" >> ~/.bashrc)
+echo "PS1='\[\e[32m\][\u@\h \W]\$\[\e[0m\] '" >> ~/.bashrc)
 
 echo "[配置 dir-colors...]"
 grep "DIR_COLORS" ~/.bashrc >> /dev/null ||\

@@ -94,11 +94,11 @@ if 1
 Plugin 'vimwiki/vimwiki'
 endif
 
-if 0
+if 1
 Plugin 'Mark'
 endif
 
-if 1
+if 0
 Plugin 'altercation/vim-colors-solarized'
 syntax enable
 set background=dark
