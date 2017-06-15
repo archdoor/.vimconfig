@@ -95,6 +95,11 @@ Plugin 'vimwiki/vimwiki'
 let nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'c': 'c', 'asm': 's'}
 endif
 
+if 1 
+Plugin 'mattn/calendar-vim'
+nnoremap \c :Calendar<CR>
+endif
+
 if 1
 Plugin 'Mark'
 endif
