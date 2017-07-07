@@ -53,6 +53,20 @@ set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 set termencoding=utf-8
 
+"c程序编译运行
+map <F5> :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+	exec "!gcc % -o %<"
+	exec "! %<"
+endfunc
+
+"c++程序编译运行
+map <F6> :call CompileRunGpp()<CR>
+func! CompileRunGpp()
+	exec "!g++ % -o %<"
+	exec "! %<"
+endfunc
+
 
 "++++++++++++++++++++++++++++插件配置++++++++++++++++++++++++++++++++++++
 "1.Github vim-script 用户插件：Plugin 'plugin'
