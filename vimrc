@@ -67,9 +67,6 @@ func! CompileRunGpp()
 	exec "! %<"
 endfunc
 
-"设置mapleader
-let mapleader='\'
-
 
 "++++++++++++++++++++++++++++插件配置++++++++++++++++++++++++++++++++++++
 "1.Github vim-script 用户插件：Plugin 'plugin'
@@ -100,7 +97,7 @@ Plugin 'kien/ctrlp.vim'
 
 "文件目录
 Plugin 'scrooloose/nerdtree'
-nnoremap <c-o> :NERDTree <cr>
+nnoremap <Leader>t :NERDTree <cr>
 
 "单词高亮
 Plugin 'Mark'
