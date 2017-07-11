@@ -67,6 +67,9 @@ func! CompileRunGpp()
 	exec "! %<"
 endfunc
 
+"设置mapleader
+let mapleader='\'
+
 
 "++++++++++++++++++++++++++++插件配置++++++++++++++++++++++++++++++++++++
 "1.Github vim-script 用户插件：Plugin 'plugin'
@@ -92,28 +95,28 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 0
 endif
 
-if 1 
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'winmanager'
-let g:winManagerWindowLayout = "BufExplorer,FileExplorer|TagList"
-endif
-
-if 1 
+"文件搜索
 Plugin 'kien/ctrlp.vim'
-let g:ctrlp_working_path_mode = 'w'
-endif
 
-if 1 
+"文件目录
+Plugin 'scrooloose/nerdtree'
+nnoremap <c-o> :NERDTree <cr>
+
+"单词高亮
+Plugin 'Mark'
+
+"单词搜索(首先安装the_silver_searcher)
+Plugin 'rking/ag.vim'
+nnoremap <Leader>f :Ag <c-r><c-w>
+
+"wiki笔记
 Plugin 'vimwiki/vimwiki'
 let nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'c': 'c', 'asm': 's'}
 
+"日历插件
 Plugin 'mattn/calendar-vim'
-nnoremap \c :Calendar<CR>
-endif
+nnoremap <Leader>c :Calendar<CR>
 
-if 1
-Plugin 'Mark'
-endif
 
 if 1
 	Plugin 'Lokaltog/vim-powerline'
@@ -146,7 +149,7 @@ if 1
 	nnoremap go :YcmCompleter GoToDefinitionElseDeclaration<CR>
 endif
 
-if 0
+if 1
 	Plugin 'altercation/vim-colors-solarized'
 	syntax enable
 	set background=dark
