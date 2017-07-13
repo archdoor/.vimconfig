@@ -45,28 +45,13 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-"配色方案
-colorscheme desert
-
 "设置编码类型
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 set termencoding=utf-8
 
-"c程序编译运行
-map <F5> :call CompileRunGcc()<CR>
-func! CompileRunGcc()
-	exec "!gcc % -o %<"
-	exec "! %<"
-endfunc
-
-"c++程序编译运行
-map <F6> :call CompileRunGpp()<CR>
-func! CompileRunGpp()
-	exec "!g++ % -o %<"
-	exec "! %<"
-endfunc
-
+"配色方案
+colorscheme default
 
 "++++++++++++++++++++++++++++插件配置++++++++++++++++++++++++++++++++++++
 "1.Github vim-script 用户插件：Plugin 'plugin'
@@ -83,7 +68,7 @@ call vundle#begin()
 
 Plugin 'gmarik/vundle' 
 
-if 1
+if 0
 Plugin 'taglist.vim' 
 "set tags=tags;
 "set autochdir
@@ -115,7 +100,6 @@ let g:vimwiki_list = [{'path_html': '~/archdoor.github.io'}]
 Plugin 'mattn/calendar-vim'
 nnoremap <Leader>c :Calendar<CR>
 
-
 if 1
 	Plugin 'Lokaltog/vim-powerline'
 	set laststatus=2
@@ -125,7 +109,7 @@ if 1
 	set t_Co=256
 endif
 
-if 1
+if 0
 	Plugin 'Valloric/YouCompleteMe'
 	set completeopt=longest,menu
 	let g:ycm_confirm_extra_conf=0
@@ -145,14 +129,6 @@ if 1
 	nnoremap gc :YcmCompleter GoToDeclaration<CR>
 	nnoremap gd :YcmCompleter GoToDefinition<CR>
 	nnoremap go :YcmCompleter GoToDefinitionElseDeclaration<CR>
-endif
-
-if 1
-	Plugin 'altercation/vim-colors-solarized'
-	syntax enable
-	set background=dark
-	set t_Co=256
-	colorscheme solarized
 endif
 
 call vundle#end()
