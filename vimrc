@@ -109,6 +109,7 @@ nnoremap <Leader>f :Ag <c-r><c-w>
 "wiki笔记
 Plugin 'vimwiki/vimwiki'
 let nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'c': 'c', 'asm': 's'}
+let g:vimwiki_list = [{'path_html': '~/archdoor.github.io'}]
 
 "日历插件
 Plugin 'mattn/calendar-vim'
