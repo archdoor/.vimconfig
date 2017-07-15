@@ -80,15 +80,27 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 0
 endif
 
+"文件搜索
 Plugin 'kien/ctrlp.vim'
 
+"文件目录
+Plugin 'scrooloose/nerdtree'
+nnoremap <Leader>t :NERDTree <cr>
+
+"单词高亮
+Plugin 'Mark'
+
+"单词搜索(首先安装the_silver_searcher)
+Plugin 'rking/ag.vim'
+nnoremap <Leader>f :Ag <c-r><c-w>
+
+"wiki笔记
 Plugin 'vimwiki/vimwiki'
 let nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'c': 'c', 'asm': 's'}
 
+"日历插件
 Plugin 'mattn/calendar-vim'
 nnoremap <Leader>c :Calendar<CR>
-
-Plugin 'Mark'
 
 if 1
 	Plugin 'Lokaltog/vim-powerline'
@@ -122,6 +134,7 @@ if 0
 endif
 
 if 0
+	"Plugin 'seebi/dircolors-solarized'
 	Plugin 'altercation/vim-colors-solarized'
 	syntax enable
 	set background=dark
