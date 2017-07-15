@@ -53,20 +53,8 @@ set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 set termencoding=utf-8
 
-"c程序编译运行
-map <F5> :call CompileRunGcc()<CR>
-func! CompileRunGcc()
-	exec "!gcc % -o %<"
-	exec "! %<"
-endfunc
-
-"c++程序编译运行
-map <F6> :call CompileRunGpp()<CR>
-func! CompileRunGpp()
-	exec "!g++ % -o %<"
-	exec "! %<"
-endfunc
-
+"设置mapleader
+let mapleader='\'
 
 "++++++++++++++++++++++++++++插件配置++++++++++++++++++++++++++++++++++++
 "1.Github vim-script 用户插件：Plugin 'plugin'
@@ -83,7 +71,7 @@ call vundle#begin()
 
 Plugin 'gmarik/vundle' 
 
-if 1
+if 0
 Plugin 'taglist.vim' 
 "set tags=tags;
 "set autochdir
@@ -92,28 +80,15 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 0
 endif
 
-if 1 
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'winmanager'
-let g:winManagerWindowLayout = "BufExplorer,FileExplorer|TagList"
-endif
-
-if 1 
 Plugin 'kien/ctrlp.vim'
-let g:ctrlp_working_path_mode = 'w'
-endif
 
-if 1 
 Plugin 'vimwiki/vimwiki'
 let nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'c': 'c', 'asm': 's'}
 
 Plugin 'mattn/calendar-vim'
-nnoremap \c :Calendar<CR>
-endif
+nnoremap <Leader>c :Calendar<CR>
 
-if 1
 Plugin 'Mark'
-endif
 
 if 1
 	Plugin 'Lokaltog/vim-powerline'
@@ -124,7 +99,7 @@ if 1
 	set t_Co=256
 endif
 
-if 1
+if 0
 	Plugin 'Valloric/YouCompleteMe'
 	set completeopt=longest,menu
 	let g:ycm_confirm_extra_conf=0
