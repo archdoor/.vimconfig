@@ -27,19 +27,5 @@ alias lla='ls -la'\n\
 alias vi='vim'\
 " >> ~/.bashrc
 
-echo "[配置 dir-colors...]"
-grep "DIR_COLORS" ~/.bashrc >> /dev/null ||\
-echo -e "\n\
-# [DIR_COLORS]\n\
-eval \`dircolors ~/.vim/dircolors/dircolors.256dark\`\n\
-" >> ~/.bashrc
-
-echo "[配置 vim color...]"
-if [ -d  ${CUR_DIR}/vim/bundle/vim-colors-solarized ]; then
-	ln -sfT ${CUR_DIR}/vim/bundle/vim-colors-solarized/colors/solarized.vim ${CUR_DIR}/vim/colors/solarized.vim
-else
-	echo -e "\tPlugin vim-colors-solarized is not exist!"
-fi
-
 echo "[配置完成！]"
 

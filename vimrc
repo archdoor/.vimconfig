@@ -133,15 +133,6 @@ if 0
 	nnoremap go :YcmCompleter GoToDefinitionElseDeclaration<CR>
 endif
 
-if 0
-	"Plugin 'seebi/dircolors-solarized'
-	Plugin 'altercation/vim-colors-solarized'
-	syntax enable
-	set background=dark
-	set t_Co=256
-	colorscheme solarized
-endif
-
 call vundle#end()
 filetype on 
 filetype plugin on
