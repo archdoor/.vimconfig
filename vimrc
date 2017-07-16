@@ -45,16 +45,13 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-"配色方案
-colorscheme desert
-
 "设置编码类型
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 set termencoding=utf-8
 
-"设置mapleader
-let mapleader='\'
+"配色方案
+colorscheme default
 
 "++++++++++++++++++++++++++++插件配置++++++++++++++++++++++++++++++++++++
 "1.Github vim-script 用户插件：Plugin 'plugin'
