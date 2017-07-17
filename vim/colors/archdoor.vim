@@ -5,27 +5,46 @@ if exists("syntax_on")
 endif
 let g:colors_name = "archdoor"
 
+" Normal		普通文本
+" Comment		注释
+" Constant		常量
+" Special		特殊字符(如C中的%d,转义字符等)
+" Statement		声明陈述类(for if where等)
+" PreProc		预处理
+" Type			类型
+" Search		搜索颜色
+" CursorLine	光标所在行
+" CursorColumn	光标所在列
+"
+"
+" highlight	主要用来配色，包括语法高亮等个性化的配置
+" cterm		原生vim设置样式，设置为NONE表示可自定义
+" ctermbg	终端vim的背景色
+" ctermfg	终端vim的前景色
+" guibg		gvim的背景色
+" guifg		gvim的前景色
 
-highlight Normal		guifg=Grey80	guibg=Black					ctermfg=LightGrey	ctermbg=Black
-highlight Search		guifg=Black		guibg=Red		gui=bold	ctermfg=Black		ctermbg=Red					cterm=none
-highlight Visual		guifg=#404040					gui=bold	cterm=reverse
-highlight Cursor		guifg=Black		guibg=Green		gui=bold	ctermfg=Black		ctermbg=Green				cterm=bold
-highlight Special		guifg=Orange								ctermfg=Brown
-highlight Comment		guifg=#80a0ff								ctermfg=Blue
-highlight StatusLine	guifg=blue		guibg=white		gui=none	ctermfg=blue		ctermbg=white	term=none	cterm=none
-highlight Statement		guifg=Yellow					gui=none	ctermfg=Yellow									cterm=none
-highlight Type											gui=none													cterm=none
-highlight LineNr		guifg=#90f020								ctermfg=green									cterm=none
+" GUI
+highlight Normal     guifg=Grey80	guibg=Black
+highlight Search     guifg=Black	guibg=Red	gui=bold
+highlight Visual     guifg=#404040			gui=bold
+highlight Cursor     guifg=Black	guibg=Green	gui=bold
+highlight Special    guifg=Orange
+highlight Comment    guifg=#80a0ff
+highlight StatusLine guifg=blue		guibg=white
+highlight Statement  guifg=Yellow			gui=NONE
+highlight Type						gui=NONE
+highlight LineNr	guifg=#90f020
 
-
-" only for vim 5
-if has("unix")
-  if v:version<600
-    highlight Normal  ctermfg=Grey	ctermbg=Black	cterm=none	guifg=Grey80      guibg=Black	gui=none
-    highlight Search  ctermfg=Black	ctermbg=Red	cterm=bold	guifg=Black       guibg=Red	gui=bold
-    highlight Visual  ctermfg=Black	ctermbg=yellow	cterm=bold	guifg=#404040			gui=bold
-    highlight Special ctermfg=LightBlue			cterm=none	guifg=LightBlue			gui=none
-    highlight Comment ctermfg=Cyan			cterm=none	guifg=LightBlue			gui=none
-  endif
-endif
+" Console
+highlight Normal     ctermfg=LightGrey	ctermbg=Black
+highlight Search     ctermfg=Black	ctermbg=Red	cterm=NONE
+highlight Visual					cterm=reverse
+highlight Cursor     ctermfg=Black	ctermbg=Green	cterm=bold
+highlight Special    ctermfg=Brown
+highlight Comment    ctermfg=DarkCyan
+highlight StatusLine ctermfg=Blue	ctermbg=white
+highlight Statement  ctermfg=Yellow			cterm=NONE
+highlight Type						cterm=NONE
+highlight LineNr	 ctermfg=DarkGrey   cterm=none
 

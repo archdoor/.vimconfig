@@ -100,7 +100,11 @@ let g:vimwiki_list = [{'path_html': '~/archdoor.github.io'}]
 Plugin 'mattn/calendar-vim'
 nnoremap <Leader>c :Calendar<CR>
 
-if 1
+"终端颜色表
+Plugin 'guns/xterm-color-table.vim'
+
+set laststatus=2
+if 0
 	Plugin 'Lokaltog/vim-powerline'
 	set laststatus=2
 	set guifont=PowerlineSymbols\ for\ Powerline
