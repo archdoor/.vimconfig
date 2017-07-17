@@ -103,8 +103,7 @@ nnoremap <Leader>c :Calendar<CR>
 "终端颜色表
 Plugin 'guns/xterm-color-table.vim'
 
-set laststatus=2
-if 0
+if 1
 	Plugin 'Lokaltog/vim-powerline'
 	set laststatus=2
 	set guifont=PowerlineSymbols\ for\ Powerline
