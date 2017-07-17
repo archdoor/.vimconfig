@@ -32,6 +32,9 @@ set so=999
 "搜索字段时开启实时搜索并定位
 set incsearch "set is
 
+"显示状态行
+set laststatus=2
+
 "代码折叠：按缩进折叠
 set foldmethod=indent
 "文件第一次打开时为非折叠状态
@@ -103,14 +106,11 @@ nnoremap <Leader>c :Calendar<CR>
 "终端颜色表
 Plugin 'guns/xterm-color-table.vim'
 
-if 1
-	Plugin 'Lokaltog/vim-powerline'
-	set laststatus=2
-	set guifont=PowerlineSymbols\ for\ Powerline
-	let g:Powerline_symbols = 'unicode'
-	set noshowmode
-	set t_Co=256
-endif
+Plugin 'Lokaltog/vim-powerline'
+set guifont=PowerlineSymbols\ for\ Powerline
+let g:Powerline_symbols = 'unicode'
+set noshowmode
+set t_Co=256
 
 if 0
 	Plugin 'Valloric/YouCompleteMe'
