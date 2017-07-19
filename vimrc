@@ -83,6 +83,14 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 0
 endif
 
+"代码注释
+Plugin 'tpope/vim-commentary'
+autocmd FileType python,shell,coffee set commentstring=#\ %s
+autocmd FileType java,c,cpp set commentstring=//\ %s
+
+"符号配对
+Plugin 'jiangmiao/auto-pairs'
+
 "文件搜索
 Plugin 'kien/ctrlp.vim'
 
@@ -131,10 +139,16 @@ if 1
 	let g:ycm_cache_omnifunc=0
 	"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 	let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-	nnoremap gc :YcmCompleter GoToDeclaration<CR>
-	nnoremap gd :YcmCompleter GoToDefinition<CR>
 	nnoremap go :YcmCompleter GoToDefinitionElseDeclaration<CR>
 endif
+
+"XML文档编辑
+Plugin 'othree/xml.vim'
+"HTML文档编辑
+Plugin 'mattn/emmet-vim.git'
+"HTML编辑提示
+"Plugin 'Shougo/neocomplcache.vim'
+"let g:neocomplcache_enable_quick_match = 1
 
 call vundle#end()
 filetype on 
