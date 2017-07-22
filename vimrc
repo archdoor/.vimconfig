@@ -56,6 +56,9 @@ set termencoding=utf-8
 "配色方案
 colorscheme archdoor
 
+"设置mapleader(默认'\')
+let mapleader='\'
+
 "++++++++++++++++++++++++++++插件配置++++++++++++++++++++++++++++++++++++
 "1.Github vim-script 用户插件：Plugin 'plugin'
 "	插件查询：http://vim-scripts.org/vim/scripts.html
@@ -112,7 +115,7 @@ let g:Powerline_symbols = 'unicode'
 set noshowmode
 set t_Co=256
 
-if 0
+if 1
 	Plugin 'Valloric/YouCompleteMe'
 	set completeopt=longest,menu
 	let g:ycm_confirm_extra_conf=0
