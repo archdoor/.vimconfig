@@ -35,6 +35,9 @@ set incsearch "set is
 "显示状态行
 set laststatus=2
 
+"开启256色支持
+set t_Co=256
+
 "代码折叠：按缩进折叠
 set foldmethod=indent
 "文件第一次打开时为非折叠状态
@@ -113,7 +116,6 @@ Plugin 'Lokaltog/vim-powerline'
 set guifont=PowerlineSymbols\ for\ Powerline
 let g:Powerline_symbols = 'unicode'
 set noshowmode
-set t_Co=256
 
 if 1
 	Plugin 'Valloric/YouCompleteMe'

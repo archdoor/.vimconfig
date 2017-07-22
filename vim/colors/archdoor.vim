@@ -1,28 +1,86 @@
+" 配置主题整体色调，只有两个选择：dark(暗色调)  light(亮色调)
 set background=dark
-hi clear
+highlight clear
 if exists("syntax_on")
   syntax reset
 endif
 let g:colors_name = "archdoor"
 
-" Normal		普通文本
-" Comment		注释
-" Constant		常量
-" Special		特殊字符(如C中的%d,转义字符等)
-" Statement		声明陈述类(for if where等)
-" PreProc		预处理
-" Type			类型
-" Search		搜索颜色
-" CursorLine	光标所在行
-" CursorColumn	光标所在列
-"
 "
 " highlight	主要用来配色，包括语法高亮等个性化的配置
-" cterm		原生vim设置样式，设置为NONE表示可自定义
-" ctermbg	终端vim的背景色
-" ctermfg	终端vim的前景色
-" guibg		gvim的背景色
+" term		黑白终端vim的属性(没必要配置)
+" cterm		彩色终端vim的属性，原生vim设置样式，设置为NONE表示可自定义
+" ctermfg	彩色终端vim的前景色
+" ctermbg	彩色终端vim的背景色
+" gui		GUI属性
 " guifg		gvim的前景色
+" guibg		gvim的背景色
+" 
+" 由于不是所有终端都支持256色，因此使用一些安全色会使我们的主题更有移植性，
+" 而GUI可以支持所有颜色，不在考虑范围之内，vim文档给出的安全色如下：
+" 0 Black
+" 1 DarkBlue
+" 2 DarkGreen
+" 3 DarkCyan
+" 4 DarkRed
+" 5 DarkMagenta
+" 6 Brown, DarkYellow
+" 7 LightGray, LightGrey, Gray, Grey
+" 8 DarkGray, DarkGrey
+" 9 Blue, LightBlue
+" 10 Green, LightGreen
+" 11 Cyan, LightCyan
+" 12 Red, LightRed
+" 13 Magenta, LightMagenta
+" 14 Yellow, LightYellow
+" 15 White
+" 
+" 状态栏属性：
+" StatusLine	状态栏
+" StatusLineNC	非当前窗口状态栏
+" Error			错误
+" ErrorMsg		错误信息
+" WarningMsg	警告信息
+" ModeMsg		当前模式
+" MoreMsg		其他文本
+" Question		询问用户
+" 
+" 文本搜索属性：
+" IncSearch		增量搜索是匹配的文本字符
+" Search		匹配的文本字符
+" 
+" 弹出菜单
+" Pmenu			弹出菜单
+" PmenuSel		菜单当前选择项
+" 
+" 窗体边框相关属性：
+" VertSplit		垂直分割窗口的边框
+" LineNr		行号
+" Cursor		光标所在字符
+" CursorLine	光标所在行
+" CursorColumn	光标所在列
+" ColorColumn	标尺
+" NonText		窗口尾部的~和@，以及文本里实际不显示的字符
+" 
+" diff模式属性：
+" DiffAdd		diff模式增加的行
+" DiffChange	diff模式改变的行
+" DiffDelete	diff模式删除的行
+" DiffText		diff模式插入的文本
+" 
+" C/C++语法
+" Comment		注释
+" PreProc		预处理
+" Type			数据类型
+" Constant		常量
+" Statement		控制语句(for if where等)
+" Special		字符串中的特殊字符(如C中的%d,转义字符等)
+" String		字符串
+" cCppString	Cpp字符串
+" Number		数字
+" Todo			TODO/HACK/FIXME等标签
+" Normal		普通文本
+"
 
 " GUI
 highlight Normal     guifg=Grey80	guibg=Black
