@@ -110,6 +110,7 @@ nnoremap <Leader>f :Ag <c-r><c-w>
 
 "wiki笔记
 Plugin 'vimwiki/vimwiki'
+let g:vimwiki_dir_link='index'
 let nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'c': 'c', 'asm': 's'}
 let g:vimwiki_list = [{'path_html': '~/archdoor.github.io'}]
 
@@ -150,8 +151,7 @@ Plugin 'othree/xml.vim'
 "HTML文档编辑
 Plugin 'mattn/emmet-vim.git'
 "HTML编辑提示
-"Plugin 'Shougo/neocomplcache.vim'
-"let g:neocomplcache_enable_quick_match = 1
+Plugin 'Shougo/neocomplcache.vim'
 
 call vundle#end()
 filetype on 
