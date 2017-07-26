@@ -18,22 +18,22 @@ let g:colors_name = "archdoor"
 " 
 " 由于不是所有终端都支持256色，因此使用一些安全色会使我们的主题更有移植性，
 " 而GUI可以支持所有颜色，不在考虑范围之内，vim文档给出的安全色如下：
-" 0 Black
-" 1 DarkBlue
-" 2 DarkGreen
-" 3 DarkCyan
-" 4 DarkRed
-" 5 DarkMagenta
-" 6 Brown, DarkYellow
-" 7 LightGray, LightGrey, Gray, Grey
-" 8 DarkGray, DarkGrey
-" 9 Blue, LightBlue
-" 10 Green, LightGreen
-" 11 Cyan, LightCyan
-" 12 Red, LightRed
-" 13 Magenta, LightMagenta
-" 14 Yellow, LightYellow
-" 15 White
+" 0 Black					黑色
+" 1 DarkBlue				深蓝色
+" 2 DarkGreen				深绿色
+" 3 DarkCyan				深青色
+" 4 DarkRed					深红
+" 5 DarkMagenta				深洋红色
+" 6 Brown, DarkYellow		棕色
+" 7 LightGray, LightGrey, Gray, Grey	灰色
+" 8 DarkGray, DarkGrey		深灰色
+" 9 Blue, LightBlue			蓝色
+" 10 Green, LightGreen		绿色
+" 11 Cyan, LightCyan		蓝绿色
+" 12 Red, LightRed			红色
+" 13 Magenta, LightMagenta	洋红，品红
+" 14 Yellow, LightYellow	黄色
+" 15 White					白色
 " 
 " 状态栏属性：
 " StatusLine	状态栏
@@ -95,14 +95,15 @@ highlight Type						gui=NONE
 highlight LineNr	guifg=#90f020
 
 " Console
-highlight Normal     ctermfg=LightGrey	ctermbg=Black
+highlight Normal     ctermfg=Grey	ctermbg=Black
 highlight Search     ctermfg=Black	ctermbg=Red	cterm=NONE
 highlight Visual					cterm=reverse
 highlight Cursor     ctermfg=Black	ctermbg=Green	cterm=bold
 highlight Special    ctermfg=Brown
-highlight Comment    ctermfg=DarkCyan
+highlight Comment    ctermfg=DarkGrey
 highlight StatusLine ctermfg=Blue	ctermbg=white
-highlight Statement  ctermfg=Yellow			cterm=NONE
-highlight Type						cterm=NONE
+highlight Statement  ctermfg=DarkYellow			cterm=NONE
+highlight Type		 ctermfg=DarkGreen			cterm=NONE
 highlight LineNr	 ctermfg=DarkGrey   cterm=none
+highlight String	 ctermfg=Brown   cterm=none
 
