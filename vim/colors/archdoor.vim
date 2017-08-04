@@ -96,7 +96,7 @@ highlight LineNr	guifg=#90f020
 
 " Console
 highlight Normal     ctermfg=Grey	ctermbg=Black
-highlight Search     ctermfg=Black	ctermbg=Red	cterm=NONE
+highlight Search     ctermfg=Black	ctermbg=DarkGrey	cterm=NONE
 highlight Visual					cterm=reverse
 highlight Cursor     ctermfg=Black	ctermbg=Green	cterm=bold
 highlight Special    ctermfg=DarkRed
