@@ -106,7 +106,7 @@ Plugin 'Mark'
 
 "单词搜索(首先安装the_silver_searcher)
 Plugin 'rking/ag.vim'
-nnoremap <Leader>f :Ag <c-r><c-w>
+nnoremap <Leader>f :Ag! <c-r><c-w>
 
 "wiki笔记
 Plugin 'vimwiki/vimwiki'
