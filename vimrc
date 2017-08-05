@@ -141,7 +141,6 @@ if 1
 	let g:ycm_collect_identifiers_from_comments_and_strings = 0  
 	let g:ycm_collect_identifiers_from_tags_files=1
 	let g:ycm_cache_omnifunc=0
-	"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 	let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 	nnoremap go :YcmCompleter GoToDefinitionElseDeclaration<CR>
 endif
