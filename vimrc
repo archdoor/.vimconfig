@@ -27,7 +27,8 @@ set cindent
 set smartindent
 
 "光标始终位于中间位置(若是其他数字，则是光标距离上下边界的行数)
-set so=999
+" set so=999
+set so=5
 
 "搜索字段时开启实时搜索并定位
 set incsearch "set is
