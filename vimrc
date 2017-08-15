@@ -52,6 +52,11 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+"统计光标所在字符串出现次数
+nnoremap <Leader>wc :% s/<c-r><c-w>/&/gn <cr>
+" nnoremap <Leader>\wc :Ag! <c-r><c-w> <c-r>=expand("%:p")<cr><cr> :% s/<c-r><c-w>/&/gn
+nnoremap <Leader>\wc :Ag! <c-r><c-w> <c-r>=expand("%:p")<cr>
+
 "设置编码类型
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
@@ -107,7 +112,10 @@ Plugin 'Mark'
 
 "单词搜索(首先安装the_silver_searcher)
 Plugin 'rking/ag.vim'
-nnoremap <Leader>f :Ag! <c-r><c-w>
+" 当前文件搜索
+nnoremap <Leader>f :Ag! <c-r><c-w> <c-r>=expand("%:p")<cr>
+" 当前目录搜索
+nnoremap <Leader>F :Ag! <c-r><c-f> <cr>
 
 "wiki笔记
 Plugin 'vimwiki/vimwiki'
@@ -117,7 +125,7 @@ let g:vimwiki_list = [{'path_html': '~/archdoor.github.io'}]
 
 "日历插件
 Plugin 'mattn/calendar-vim'
-nnoremap <Leader>c :Calendar<CR>
+nnoremap <Leader>c :Calendar<cr>
 
 "终端颜色表
 Plugin 'guns/xterm-color-table.vim'
@@ -144,7 +152,7 @@ if 1
 	let g:ycm_cache_omnifunc=0
 	"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 	let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-	nnoremap go :YcmCompleter GoToDefinitionElseDeclaration<CR>
+	nnoremap go :YcmCompleter GoToDefinitionElseDeclaration<cr>
 endif
 
 "XML文档编辑
