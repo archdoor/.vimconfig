@@ -54,8 +54,7 @@ nnoremap <C-H> <C-W><C-H>
 
 "统计光标所在字符串出现次数
 nnoremap <Leader>wc :% s/<c-r><c-w>/&/gn <cr>
-" nnoremap <Leader>\wc :Ag! <c-r><c-w> <c-r>=expand("%:p")<cr><cr> :% s/<c-r><c-w>/&/gn
-nnoremap <Leader>\wc :Ag! <c-r><c-w> <c-r>=expand("%:p")<cr>
+nnoremap <Leader>\wc :Ag! <c-r><c-w> <c-r>=expand("%:p")<cr><cr>
 
 "设置编码类型
 set encoding=utf-8
