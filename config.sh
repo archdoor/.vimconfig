@@ -12,7 +12,7 @@ ln -sfT ${CUR_DIR}/vimrc ~/.vimrc
 ln -sfT ${CUR_DIR}/gvimrc ~/.gvimrc
 ln -sfT ${CUR_DIR}/vim ~/.vim
 
-if 0; then
+if true; then
 
 echo "[配置 PS1...]"
 grep "\[PS1\]" ~/.bashrc >> /dev/null ||\
