@@ -111,6 +111,7 @@ Plugin 'Mark'
 
 "单词搜索(首先安装the_silver_searcher)
 Plugin 'rking/ag.vim'
+let g:ag_highlight=1
 " 当前文件搜索
 nnoremap <Leader>f :Ag! <c-r><c-w> <c-r>=expand("%:p")<cr>
 " 当前目录搜索
