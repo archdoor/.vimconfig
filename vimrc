@@ -109,7 +109,7 @@ nnoremap <Leader>t :NERDTree <cr>
 "单词高亮
 Plugin 'Mark'
 
-"单词搜索(首先安装the_silver_searcher)
+"单词搜索(首先安装the_silver_searcher, ubuntu安装silversearcher_ag)
 Plugin 'rking/ag.vim'
 let g:ag_highlight=1
 " 当前文件搜索
