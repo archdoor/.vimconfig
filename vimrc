@@ -54,7 +54,6 @@ nnoremap <C-H> <C-W><C-H>
 
 "统计光标所在字符串出现次数
 nnoremap <Leader>wc :% s/<c-r><c-w>/&/gn <cr>
-nnoremap <Leader>\wc :Ag! <c-r><c-w> <c-r>=expand("%:p")<cr><cr>
 
 "设置编码类型
 set encoding=utf-8
@@ -115,7 +114,7 @@ let g:ag_highlight=1
 " 当前文件搜索
 nnoremap <Leader>f :Ag! <c-r><c-w> <c-r>=expand("%:p")<cr>
 " 当前目录搜索
-nnoremap <Leader>F :Ag! <c-r><c-f> <cr>
+nnoremap <Leader>F :Ag! <c-r><c-w>
 
 "wiki笔记
 Plugin 'vimwiki/vimwiki'
