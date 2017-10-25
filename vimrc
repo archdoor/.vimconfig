@@ -90,6 +90,9 @@ Plugin 'taglist.vim'
 let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 0
+let Tlist_Close_On_Select = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Use_Horiz_Window = 0
 nnoremap <silent> <leader>tl :TlistOpen<cr>
 endif
 
