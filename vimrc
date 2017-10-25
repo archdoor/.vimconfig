@@ -1,77 +1,78 @@
-"++++++++++++++++++++++++++++基础配置++++++++++++++++++++++++++++++++++++
-"显示行号 
-set nu 
-"禁止自动换行
-"set nowrap
+" ++++++++++++++++++++++++++++基础配置++++++++++++++++++++++++++++++++++++
+" 设置mapleader(默认'\')
+let mapleader='\'
 
-"语法高亮
+" 显示行号 
+set nu 
+" 禁止自动换行
+" set nowrap
+
+" 语法高亮
 syntax on
 
-"设置tab宽度为4字节
+" 设置tab宽度为4字节
 set tabstop=4 
 set softtabstop=4
 set shiftwidth=4
-"并用4个空格代替tab键
+" 并用4个空格代替tab键
 autocmd FileType c,cpp set shiftwidth=4 | set expandtab
 
-"搜索字段高亮显示
+" 搜索字段高亮显示
 set hlsearch
 
-"自动对齐，换行时自动和上一行对齐
+" 自动对齐，换行时自动和上一行对齐
 set autoindent
 
-"c/c++自动缩进
+" c/c++自动缩进
 set cindent
 
-"依据上面的对齐格式，智能的选择对齐方式
+" 依据上面的对齐格式，智能的选择对齐方式
 set smartindent
 
-"光标始终位于中间位置(若是其他数字，则是光标距离上下边界的行数)
+" 光标始终位于中间位置(若是其他数字，则是光标距离上下边界的行数)
 " set so=999
 set so=5
 
-"搜索字段时开启实时搜索并定位
+" 搜索字段时开启实时搜索并定位
 set incsearch "set is
 
-"显示状态行
+" 显示状态行
 set laststatus=2
 
-"开启256色支持
+" 开启256色支持
 set t_Co=256
 
-"代码折叠：按缩进折叠
+" 代码折叠：按缩进折叠
 set foldmethod=indent
-"文件第一次打开时为非折叠状态
+" 文件第一次打开时为非折叠状态
 set foldlevel=99
-"折叠快捷键za映射为空格键
+" 折叠快捷键za映射为空格键
 nnoremap <space> za
 
-"分割窗口之间的切换Ctrl+w映射为Ctrl+(h/j/k/l)
+" 分割窗口之间的切换Ctrl+w映射为Ctrl+(h/j/k/l)
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-"统计光标所在字符串出现次数
+" 统计光标所在字符串出现次数
 nnoremap <Leader>wc :% s/<c-r><c-w>/&/gn <cr>
 
-"设置编码类型
+" 设置编码类型
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 set termencoding=utf-8
 
-"配色方案
+" 配色方案
 colorscheme archdoor
 
-"设置mapleader(默认'\')
-let mapleader='\'
 
-"++++++++++++++++++++++++++++插件配置++++++++++++++++++++++++++++++++++++
-"1.Github vim-script 用户插件：Plugin 'plugin'
-"	插件查询：http://vim-scripts.org/vim/scripts.html
-"2.Github 其他 用户插件：Plugin 'username/plugin'
-"3.非 Github 用户插件：Plugin ''git://git.wincent.com/command-t.git''
-"4.本地插件：Plugin 'file:///home/gmarik/path/to/plugin'
+" ++++++++++++++++++++++++++++插件配置++++++++++++++++++++++++++++++++++++
+" 1.Github vim-script 用户插件：Plugin 'plugin'
+" 	插件查询：http://vim-scripts.org/vim/scripts.html
+" 2.Github 其他 用户插件：Plugin 'username/plugin'
+" 3.非 Github 用户插件：Plugin ''git://git.wincent.com/command-t.git''
+" 4.本地插件：Plugin 'file:///home/gmarik/path/to/plugin'
 if 1
 
 set nocompatible
@@ -81,34 +82,36 @@ call vundle#begin()
 
 Plugin 'gmarik/vundle' 
 
-if 0
+if 1
+" 单词搜索(首先安装ctags)
 Plugin 'taglist.vim' 
-"set tags=tags;
-"set autochdir
+" set tags=tags;
+" set autochdir 跟ag插件冲突
 let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 0
+nnoremap <silent> <leader>tl :TlistOpen<cr>
 endif
 
-"代码注释
+" 代码注释
 Plugin 'tpope/vim-commentary'
 autocmd FileType python,shell,coffee set commentstring=#\ %s
 autocmd FileType java,c,cpp set commentstring=//\ %s
 
-"符号配对
+" 符号配对
 Plugin 'jiangmiao/auto-pairs'
 
-"文件搜索
+" 文件搜索
 Plugin 'kien/ctrlp.vim'
 
-"文件目录
+" 文件目录
 Plugin 'scrooloose/nerdtree'
-nnoremap <Leader>t :NERDTree <cr>
+nnoremap <Leader>nt :NERDTree <cr>
 
-"单词高亮
+" 单词高亮
 Plugin 'Mark'
 
-"单词搜索(首先安装the_silver_searcher, ubuntu安装silversearcher_ag)
+" 单词搜索(首先安装the_silver_searcher, ubuntu安装silversearcher_ag)
 Plugin 'rking/ag.vim'
 let g:ag_highlight=1
 " 当前文件搜索
@@ -116,17 +119,17 @@ nnoremap <Leader>f :Ag! <c-r><c-w> <c-r>=expand("%:p")<cr>
 " 当前目录搜索
 nnoremap <Leader>F :Ag! <c-r><c-w>
 
-"wiki笔记
+" wiki笔记
 Plugin 'vimwiki/vimwiki'
 let g:vimwiki_dir_link='index'
 let nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'c': 'c', 'asm': 's'}
 let g:vimwiki_list = [{'path_html': '~/archdoor.github.io'}]
 
-"日历插件
+" 日历插件
 Plugin 'mattn/calendar-vim'
 nnoremap <Leader>c :Calendar<cr>
 
-"终端颜色表
+" 终端颜色表
 Plugin 'guns/xterm-color-table.vim'
 
 Plugin 'Lokaltog/vim-powerline'
@@ -153,11 +156,11 @@ if 1
 	nnoremap go :YcmCompleter GoToDefinitionElseDeclaration<cr>
 endif
 
-"XML文档编辑
+" XML文档编辑
 Plugin 'othree/xml.vim'
-"HTML文档编辑
+" HTML文档编辑
 Plugin 'mattn/emmet-vim.git'
-"HTML编辑提示
+" HTML编辑提示
 Plugin 'Shougo/neocomplcache.vim'
 
 call vundle#end()
