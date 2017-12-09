@@ -55,6 +55,12 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" 分割窗口大小调整
+nnoremap w= :resize +5 <cr>
+nnoremap w- :resize -5 <cr>
+nnoremap w, :vertical resize -10 <cr>
+nnoremap w. :vertical resize +10 <cr>
+
 " 统计光标所在字符串出现次数
 nnoremap <Leader>wc :% s/<c-r><c-w>/&/gn <cr>
 
@@ -65,6 +71,14 @@ set termencoding=utf-8
 
 " 配色方案
 colorscheme archdoor
+
+" 重新加载文件，更新外部修改
+nnoremap <Leader>fl :e <cr>
+
+" 打开文件自动定位到上次编辑位置
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 
 
 " ++++++++++++++++++++++++++++插件配置++++++++++++++++++++++++++++++++++++
