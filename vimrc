@@ -63,7 +63,7 @@ nnoremap <C-W>. :vertical resize +10 <cr>
 
 " 窗口调换到右边
 nnoremap <C-W><C-L> <C-W>r
-nnoremap <C-W><C-L> <C-W>R
+nnoremap <C-W><C-H> <C-W>R
 
 " 统计光标所在字符串出现次数
 nnoremap <Leader>wc :% s/<c-r><c-w>/&/gn <cr>
