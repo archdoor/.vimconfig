@@ -56,10 +56,14 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " 分割窗口大小调整
-nnoremap w= :resize +5 <cr>
-nnoremap w- :resize -5 <cr>
-nnoremap w, :vertical resize -10 <cr>
-nnoremap w. :vertical resize +10 <cr>
+nnoremap <C-W>= :resize +5 <cr>
+nnoremap <C-W>- :resize -5 <cr>
+nnoremap <C-W>, :vertical resize -10 <cr>
+nnoremap <C-W>. :vertical resize +10 <cr>
+
+" 窗口调换到右边
+nnoremap <C-W><C-L> <C-W>r
+nnoremap <C-W><C-L> <C-W>R
 
 " 统计光标所在字符串出现次数
 nnoremap <Leader>wc :% s/<c-r><c-w>/&/gn <cr>
