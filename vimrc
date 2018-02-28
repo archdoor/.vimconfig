@@ -2,6 +2,9 @@
 " 设置mapleader(默认'\')
 let mapleader='\'
 
+" vim分割线字符(空格)
+set fillchars=vert:\ 
+
 " 显示行号 
 set nu 
 " 禁止自动换行
@@ -9,6 +12,9 @@ set nu
 
 " 语法高亮
 syntax on
+
+" 全模式鼠标支持开启
+" set mouse=a
 
 " 设置tab宽度为4字节
 set tabstop=4 
