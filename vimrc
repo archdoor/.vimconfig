@@ -134,6 +134,8 @@ Plugin 'kien/ctrlp.vim'
 " 文件目录
 Plugin 'scrooloose/nerdtree'
 nnoremap <Leader>nt :NERDTree <cr>
+" 右侧显示窗口
+let NERDTreeWinPos=1    
 
 " 单词高亮
 Plugin 'Mark'
