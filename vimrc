@@ -114,7 +114,7 @@ Plugin 'taglist.vim'
 let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 0
-let Tlist_Close_On_Select = 1
+let Tlist_Close_On_Select = 0
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Use_Horiz_Window = 0
 nnoremap <silent> <leader>tl :TlistOpen<cr>
@@ -134,8 +134,12 @@ Plugin 'kien/ctrlp.vim'
 " 文件目录
 Plugin 'scrooloose/nerdtree'
 nnoremap <Leader>nt :NERDTree <cr>
+" 无文件时自动退出
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " 右侧显示窗口
 let NERDTreeWinPos=1    
+" 打开文件后是否关闭
+let NERDTreeQuitOnlpen=0
 
 " 单词高亮
 Plugin 'Mark'
