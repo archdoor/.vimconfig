@@ -82,9 +82,6 @@ set termencoding=utf-8
 " 配色方案
 colorscheme archdoor
 
-" 重新加载文件，更新外部修改
-nnoremap <Leader>fl :e <cr>
-
 " 打开文件自动定位到上次编辑位置
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
