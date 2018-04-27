@@ -21,7 +21,7 @@ grep "\[PS1\]" ~/.bashrc >> /dev/null ||\
 
 echo "[配置 alias...]"
 grep "SELF_ALIAS" ~/.bashrc >> /dev/null ||\
-echo -e "\n\
+echo "\n\
 # [SELF_ALIAS]\n\
 alias la='ls -a'\n\
 alias ll='ls -l'\n\
