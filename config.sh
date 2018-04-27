@@ -16,8 +16,7 @@ if true; then
 
 echo "[配置 PS1...]"
 grep "\[PS1\]" ~/.bashrc >> /dev/null ||\
-(echo -e "\n# [PS1]" >> ~/.bashrc; \
-echo "PS1='\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\W\[\e[00m\]\$ '" >> ~/.bashrc)
+(echo "\n# [PS1]" >> ~/.bashrc; echo "PS1='\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\W\[\e[00m\]\$ '" >> ~/.bashrc)
 
 
 echo "[配置 alias...]"
