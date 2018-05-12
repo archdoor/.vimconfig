@@ -154,7 +154,7 @@ nnoremap <Leader>F :Ag! <c-r><c-w>
 Plugin 'vimwiki/vimwiki'
 let g:vimwiki_dir_link='index'
 let nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'c': 'c', 'asm': 's'}
-let g:vimwiki_list = [{'path_html': '~/archdoor.github.io'}]
+let g:vimwiki_list = [{'path_html': '~/archdoor.github.io', 'auto_toc': 1, 'css_name': '~/vimwiki/style.css'}]
 
 " markdown
 Plugin 'godlygeek/tabular'
@@ -162,7 +162,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'suan/vim-instant-markdown'
 let g:instant_markdown_open_to_the_world = 1
 let g:instant_markdown_allow_unsafe_content = 1
-let g:instant_markdown_autostart = 0
+let g:instant_markdown_autostart = 1
 
 " 日历插件
 Plugin 'mattn/calendar-vim'
