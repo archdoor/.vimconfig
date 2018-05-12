@@ -154,7 +154,8 @@ nnoremap <Leader>F :Ag! <c-r><c-w>
 Plugin 'vimwiki/vimwiki'
 let g:vimwiki_dir_link='index'
 let nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'c': 'c', 'asm': 's'}
-let g:vimwiki_list = [{'path_html': '~/archdoor.github.io', 'auto_toc': 1, 'css_name': '~/vimwiki/style.css'}]
+let g:vimwiki_list = [{'path_html': '~/archdoor.github.io', 'css_name': '~/vimwiki/style.css', 'auto_toc': 1}]
+let g:vimwiki_toc_header = '目录索引'
 
 " markdown
 Plugin 'godlygeek/tabular'
