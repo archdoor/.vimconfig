@@ -103,20 +103,11 @@ call vundle#begin()
 
 Plugin 'gmarik/vundle' 
 
-if 1
-" 单词搜索(首先安装ctags)
-Plugin 'taglist.vim' 
-" set tags=tags;
-" set autochdir 跟ag插件冲突
-let Tlist_Ctags_Cmd ='/usr/bin/ctags'
-let Tlist_Show_One_File = 1
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_Use_Right_Window = 0
-let Tlist_Close_On_Select = 1
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Use_Horiz_Window = 0
-nnoremap <silent> <leader>tl :TlistOpen<cr>
-endif
+" 标签显示(首先安装ctags)
+Bundle 'majutsushi/tagbar'
+let g:tagbar_ctags_bin ='/usr/bin/ctags'
+let g:tagbar_left = 1
+nnoremap <silent> <leader>tl :TagbarToggle<cr>
 
 " 代码注释
 Plugin 'tpope/vim-commentary'
@@ -154,8 +145,18 @@ nnoremap <Leader>F :Ag! <c-r><c-w>
 Plugin 'vimwiki/vimwiki'
 let g:vimwiki_dir_link='index'
 let nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'c': 'c', 'asm': 's'}
-let g:vimwiki_list = [{'path_html': '~/archdoor.github.io', 'css_name': '~/vimwiki/style.css', 'auto_toc': 1}]
+let g:vimwiki_list = [{'path_html': '~/archdoor.github.io', 'css_name': 'vimwiki.css', 'auto_toc': 1, 'maxhi': 1}]
 let g:vimwiki_toc_header = '目录索引'
+" 利用tagbar生成wiki文件侧边栏目录
+let g:tagbar_type_vimwiki = {
+          \   'ctagstype':'vimwiki'
+          \ , 'kinds':['h:header']
+          \ , 'sro':'&&&'
+          \ , 'kind2scope':{'h':'header'}
+          \ , 'sort':0
+          \ , 'ctagsbin':'~/vimwiki/vwtags.py'
+          \ , 'ctagsargs': 'default'
+          \ }
 
 " markdown
 Plugin 'godlygeek/tabular'
@@ -167,7 +168,7 @@ let g:instant_markdown_autostart = 1
 
 " 日历插件
 Plugin 'mattn/calendar-vim'
-nnoremap <Leader>c :Calendar<cr>
+nnoremap <Leader>cl :Calendar<cr>
 
 " 终端颜色表
 Plugin 'guns/xterm-color-table.vim'
