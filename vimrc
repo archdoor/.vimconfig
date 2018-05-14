@@ -145,8 +145,12 @@ nnoremap <Leader>F :Ag! <c-r><c-w>
 Plugin 'vimwiki/vimwiki'
 let g:vimwiki_dir_link='index'
 let nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'c': 'c', 'asm': 's'}
-let g:vimwiki_list = [{'path_html': '~/archdoor.github.io', 'css_name': 'vimwiki.css', 'auto_toc': 1, 'maxhi': 1}]
+let g:vimwiki_list = [{'path_html': '~/archdoor.github.io', 'css_name': 'css/vimwiki.css', 'css_file': '~/vimwiki/vimwiki.css', 'auto_toc': 1, 'maxhi': 1}]
+let g:vimwiki_hl_headers = 1
 let g:vimwiki_toc_header = '目录索引'
+let g:vimwiki_menu = ''
+" 标记为完成的 checklist 项目会有特别的颜色
+let g:vimwiki_hl_cb_checked = 1
 " 利用tagbar生成wiki文件侧边栏目录
 let g:tagbar_type_vimwiki = {
           \   'ctagstype':'vimwiki'
