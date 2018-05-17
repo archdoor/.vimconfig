@@ -150,7 +150,7 @@ nnoremap <Leader>F :Ag! <c-r><c-w>
 Plugin 'vimwiki/vimwiki'
 let g:vimwiki_dir_link='index'
 let nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'c': 'c', 'asm': 's'}
-let g:vimwiki_list = [{'path_html': '~/archdoor.github.io', 'css_name': 'css/vimwiki.css', 'css_file': '~/vimwiki/vimwiki.css', 'auto_toc': 1, 'maxhi': 1}]
+let g:vimwiki_list = [{'path_html': '~/archdoor.github.io', 'css_name': 'css/vimwiki.css', 'auto_toc': 1, 'maxhi': 1}]
 let g:vimwiki_hl_headers = 1
 let g:vimwiki_toc_header = '目录索引'
 let g:vimwiki_menu = ''
