@@ -74,6 +74,11 @@ nnoremap <C-W><C-H> <C-W>R
 " 统计光标所在字符串出现次数
 nnoremap <Leader>wc :% s/<c-r><c-w>/&/gn <cr>
 
+" a.vim插件快捷键映射
+nnoremap <Leader>ao :A <cr>
+nnoremap <Leader>av :AV <cr>
+nnoremap <Leader>as :AS <cr>
+
 " 设置编码类型
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
