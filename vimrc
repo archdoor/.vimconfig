@@ -75,7 +75,7 @@ nnoremap <C-W><C-H> <C-W>R
 nnoremap <Leader>wc :% s/<c-r><c-w>/&/gn <cr>
 
 " a.vim插件快捷键映射
-nnoremap <Leader>ao :A <cr>
+nnoremap <Leader>aa :A <cr>
 nnoremap <Leader>av :AV <cr>
 nnoremap <Leader>as :AS <cr>
 
