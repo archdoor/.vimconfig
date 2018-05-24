@@ -112,6 +112,9 @@ Plugin 'gmarik/vundle'
 Bundle 'majutsushi/tagbar'
 let g:tagbar_ctags_bin ='/usr/bin/ctags'
 let g:tagbar_left = 1
+let g:tagbar_autofocus = 1
+let g:tagbar_autoclose = 1
+let g:tagbar_sort = 0
 nnoremap <silent> <leader>tl :TagbarToggle<cr>
 
 " 代码注释
