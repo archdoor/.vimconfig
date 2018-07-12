@@ -79,6 +79,9 @@ nnoremap <Leader>aa :A <cr>
 nnoremap <Leader>av :AV <cr>
 nnoremap <Leader>as :AS <cr>
 
+" 删除重复行
+nnoremap <Leader>dc :g/^\(.*\)$\n\1$/d <cr>
+
 " 设置编码类型
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
