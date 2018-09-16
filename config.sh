@@ -8,9 +8,8 @@ if [ ! -d  ${CUR_DIR}/vim/bundle/vundle ]; then
 fi
 
 echo "[配置 .vimrc .gvimrc .vim ...]"
-ln -sfT ${CUR_DIR}/vimrc ~/.vimrc
-ln -sfT ${CUR_DIR}/gvimrc ~/.gvimrc
 ln -sfT ${CUR_DIR}/vim ~/.vim
+ln -sfT ${CUR_DIR}/vim/vimrc ~/.vimrc
 
 if true; then
 
