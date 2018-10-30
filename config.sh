@@ -15,7 +15,7 @@ if true; then
 
 echo "[配置 PS1...]"
 grep "\[PS1\]" ~/.bashrc >> /dev/null ||\
-(echo "\n# [PS1]" >> ~/.bashrc; echo "PS1='\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\W\[\e[00m\]\$ '" >> ~/.bashrc)
+(echo "\n# [PS1]" >> ~/.bashrc; echo "PS1='\[\e[01;32m\]\u@\h:\W\[\e[00m\]\$ '" >> ~/.bashrc)
 
 
 echo "[配置 alias...]"
@@ -24,7 +24,9 @@ echo "\n\
 # [SELF_ALIAS]\n\
 alias la='ls -a'\n\
 alias ll='ls -l'\n\
+alias llh='ls -lh'\n\
 alias lla='ls -la'\n\
+alias llah='ls -lah'\n\
 alias vi='vim'\
 " >> ~/.bashrc
 
