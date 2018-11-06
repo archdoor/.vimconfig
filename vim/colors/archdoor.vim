@@ -78,22 +78,22 @@ if version > 580
 endif
 let g:colors_name="desert"
 
-hi Normal	ctermfg=248
-hi SpecialKey	ctermfg=darkgreen
-hi NonText	cterm=bold ctermfg=darkblue
+hi Normal	ctermfg=246
+hi SpecialKey	ctermfg=yellow
 hi Directory	ctermfg=darkcyan
 hi ErrorMsg	cterm=bold ctermfg=7 ctermbg=1
 hi IncSearch	cterm=NONE ctermfg=yellow ctermbg=green
 hi Search	cterm=NONE ctermfg=grey ctermbg=blue
 hi MoreMsg	ctermfg=darkgreen
 hi ModeMsg	cterm=NONE ctermfg=brown
-hi LineNr	ctermfg=darkgrey
+hi LineNr	ctermfg=58
 hi Question	ctermfg=green
 hi StatusLine	cterm=bold,reverse
 hi StatusLineNC cterm=reverse
 hi VertSplit	cterm=reverse
 hi Title	ctermfg=5
-hi Visual	cterm=reverse
+" hi Visual	cterm=reverse
+hi Visual	ctermfg=0 ctermbg=60
 hi VisualNOS	cterm=bold,underline
 hi WarningMsg	ctermfg=1
 hi WildMenu	ctermfg=0 ctermbg=3
@@ -111,11 +111,11 @@ hi Identifier	ctermfg=6
 hi Statement	ctermfg=brown
 hi String	ctermfg=65
 hi PreProc	ctermfg=6
-hi NonText	ctermfg=6
-hi Pmenu	ctermfg=252 ctermbg=25
-hi PmenuSel	ctermfg=252 ctermbg=25
-hi PmenuSbar guifg=blue guibg=darkgray
-hi PmenuThumb guifg=#c0c0c0
+hi NonText	ctermfg=darkgrey
+hi Pmenu	ctermfg=250 ctermbg=22
+hi PmenuSel	ctermfg=250 ctermbg=28
+hi PmenuSbar ctermfg=250 ctermbg=yellow
+hi PmenuThumb ctermfg=250 ctermbg=yellow
 hi Type		ctermfg=2
 hi Underlined	cterm=underline ctermfg=5
 hi Ignore	ctermfg=darkgrey
