@@ -130,9 +130,18 @@ autocmd FileType java,c,cpp set commentstring=//\ %s
 
 " 符号配对
 Plugin 'jiangmiao/auto-pairs'
-
 " 文件搜索
 Plugin 'kien/ctrlp.vim'
+" 单词高亮
+Plugin 'Mark'
+" 终端颜色表
+Plugin 'guns/xterm-color-table.vim'
+" XML文档编辑
+Plugin 'othree/xml.vim'
+" HTML文档编辑
+Plugin 'mattn/emmet-vim.git'
+" HTML编辑提示
+Plugin 'Shougo/neocomplcache.vim'
 
 " 文件目录
 Plugin 'scrooloose/nerdtree'
@@ -144,8 +153,6 @@ let NERDTreeWinPos=1
 " 打开文件后是否关闭
 let NERDTreeQuitOnlpen=0
 
-" 单词高亮
-Plugin 'Mark'
 
 " 单词搜索(首先安装the_silver_searcher, ubuntu安装silversearcher_ag)
 Plugin 'rking/ag.vim'
@@ -188,8 +195,7 @@ let g:instant_markdown_autostart = 1
 Plugin 'mattn/calendar-vim'
 nnoremap <Leader>cl :Calendar<cr>
 
-" 终端颜色表
-Plugin 'guns/xterm-color-table.vim'
+
 
 Plugin 'Lokaltog/vim-powerline'
 set guifont=PowerlineSymbols\ for\ Powerline
@@ -214,13 +220,6 @@ if 1
 	let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 	nnoremap go :YcmCompleter GoToDefinitionElseDeclaration<cr>
 endif
-
-" XML文档编辑
-Plugin 'othree/xml.vim'
-" HTML文档编辑
-Plugin 'mattn/emmet-vim.git'
-" HTML编辑提示
-Plugin 'Shougo/neocomplcache.vim'
 
 call vundle#end()
 filetype on 
