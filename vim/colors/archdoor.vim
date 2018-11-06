@@ -78,7 +78,7 @@ if version > 580
 endif
 let g:colors_name="desert"
 
-" color terminal definitions
+hi Normal	ctermfg=248
 hi SpecialKey	ctermfg=darkgreen
 hi NonText	cterm=bold ctermfg=darkblue
 hi Directory	ctermfg=darkcyan
@@ -111,12 +111,17 @@ hi Identifier	ctermfg=6
 hi Statement	ctermfg=brown
 hi String	ctermfg=65
 hi PreProc	ctermfg=6
+hi NonText	ctermfg=6
 hi Pmenu	ctermfg=252 ctermbg=25
 hi PmenuSel	ctermfg=252 ctermbg=25
+hi PmenuSbar guifg=blue guibg=darkgray
+hi PmenuThumb guifg=#c0c0c0
 hi Type		ctermfg=2
 hi Underlined	cterm=underline ctermfg=5
-hi Ignore	cterm=bold ctermfg=7
 hi Ignore	ctermfg=darkgrey
 hi Error	cterm=bold ctermfg=7 ctermbg=1
+hi Todo	cterm=bold ctermfg=black ctermbg=yellow
+hi Cursor	guifg=black guibg=yellow ctermfg=black ctermbg=yellow
+hi lCursor	guifg=black guibg=white ctermfg=black ctermbg=white
 
 
