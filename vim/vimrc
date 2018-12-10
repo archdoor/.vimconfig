@@ -106,8 +106,10 @@ let NERDTreeQuitOnlpen=0 " 打开文件后是否关闭
 
 Plugin 'rking/ag.vim' " 单词搜索(首先安装the_silver_searcher, ubuntu安装silversearcher_ag)
 let g:ag_highlight=1
-nnoremap <Leader>f :Ag! <c-r><c-w> <c-r>=expand("%:p")<cr> " 当前文件搜索
-nnoremap <Leader>F :Ag! <c-r><c-w> " 当前目录搜索
+" 当前文件搜索
+nnoremap <Leader>f :Ag! <c-r><c-w> <c-r>=expand("%:p")<cr>
+" 当前目录搜索
+nnoremap <Leader>F :Ag! <c-r><c-w>
 
 Plugin 'vimwiki/vimwiki' " wiki笔记
 let g:vimwiki_dir_link='index'
