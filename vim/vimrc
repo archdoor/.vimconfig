@@ -29,20 +29,21 @@ set hlsearch
 " 自动对齐，换行时自动和上一行对齐
 set autoindent
 
-" c/c++自动缩进，禁止类中属性标签缩进
+" c/c++自动缩进
 set cindent
 set cinoptions=g0
 
 " 依据上面的对齐格式，智能的选择对齐方式
 set smartindent
 
-" 光标边界位置(999居中，其他数字表示光标距离上下边界的行数)
+" 光标始终位于中间位置(若是其他数字，则是光标距离上下边界的行数)
+" set so=999
 set so=5
 
 " 搜索字段时开启实时搜索并定位
 set incsearch "set is
 
-" 状态栏
+" 显示状态行
 set laststatus=2
 
 " 开启256色支持
@@ -79,9 +80,6 @@ nnoremap <Leader>aa :A <cr>
 nnoremap <Leader>av :AV <cr>
 nnoremap <Leader>as :AS <cr>
 
-" 删除重复行
-nnoremap <Leader>dc :g/^\(.*\)$\n\1$/d <cr>
-
 " 设置编码类型
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
@@ -111,17 +109,16 @@ call vundle#begin()
 
 Plugin 'gmarik/vundle' 
 
-" ASCII纯文本流程图
-Plugin 'DrawIt'
-
 " 标签显示(首先安装ctags)
-Plugin 'majutsushi/tagbar'
-let g:tagbar_ctags_bin ='/usr/bin/ctags'
-let g:tagbar_left = 1
-let g:tagbar_autofocus = 1
-let g:tagbar_autoclose = 1
-let g:tagbar_sort = 0
-nnoremap <silent> <leader>tl :TagbarToggle<cr>
+if 1
+	Bundle 'majutsushi/tagbar'
+	let g:tagbar_ctags_bin ='/usr/bin/ctags'
+	let g:tagbar_left = 1
+	let g:tagbar_autofocus = 1
+	let g:tagbar_autoclose = 1
+	let g:tagbar_sort = 0
+	nnoremap <silent> <leader>tl :TagbarToggle<cr>
+endif
 
 " 代码注释
 Plugin 'tpope/vim-commentary'
@@ -130,18 +127,9 @@ autocmd FileType java,c,cpp set commentstring=//\ %s
 
 " 符号配对
 Plugin 'jiangmiao/auto-pairs'
+
 " 文件搜索
 Plugin 'kien/ctrlp.vim'
-" 单词高亮
-Plugin 'Mark'
-" 终端颜色表
-Plugin 'guns/xterm-color-table.vim'
-" XML文档编辑
-Plugin 'othree/xml.vim'
-" HTML文档编辑
-Plugin 'mattn/emmet-vim.git'
-" HTML编辑提示
-Plugin 'Shougo/neocomplcache.vim'
 
 " 文件目录
 Plugin 'scrooloose/nerdtree'
@@ -153,6 +141,8 @@ let NERDTreeWinPos=1
 " 打开文件后是否关闭
 let NERDTreeQuitOnlpen=0
 
+" 单词高亮
+Plugin 'Mark'
 
 " 单词搜索(首先安装the_silver_searcher, ubuntu安装silversearcher_ag)
 Plugin 'rking/ag.vim'
@@ -195,12 +185,15 @@ let g:instant_markdown_autostart = 1
 Plugin 'mattn/calendar-vim'
 nnoremap <Leader>cl :Calendar<cr>
 
+" 终端颜色表
+Plugin 'guns/xterm-color-table.vim'
+
 Plugin 'Lokaltog/vim-powerline'
 set guifont=PowerlineSymbols\ for\ Powerline
-let g:Powerline_symbols = 'unicode'
+" let g:Powerline_symbols = 'unicode'
 set noshowmode
 
-if 1
+if 0
 	Plugin 'Valloric/YouCompleteMe'
 	set completeopt=longest,menu
 	let g:ycm_confirm_extra_conf=0
@@ -212,13 +205,20 @@ if 1
 	let g:ycm_seed_identifiers_with_syntax=1
 	let g:ycm_complete_in_comments = 1  
 	let g:ycm_complete_in_strings = 1  
-	let g:ycm_collect_identifiers_from_comments_and_strings = 1  
+	let g:ycm_collect_identifiers_from_comments_and_strings = 0  
 	let g:ycm_collect_identifiers_from_tags_files=1
 	let g:ycm_cache_omnifunc=0
 	let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 	nnoremap go :YcmCompleter GoToDefinitionElseDeclaration<cr>
-	let g:ycm_key_invoke_completion = '<C-a>'
 endif
+
+" XML文档编辑
+Plugin 'othree/xml.vim'
+" HTML文档编辑
+Plugin 'mattn/emmet-vim.git'
+" HTML编辑提示
+Plugin 'Shougo/neocomplcache.vim'
+
 
 call vundle#end()
 filetype on 
