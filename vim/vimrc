@@ -29,20 +29,20 @@ set hlsearch
 " 自动对齐，换行时自动和上一行对齐
 set autoindent
 
-" c/c++自动缩进
+" c/c++自动缩进，禁止类中属性标签缩进
 set cindent
+set cinoptions=g0
 
 " 依据上面的对齐格式，智能的选择对齐方式
 set smartindent
 
-" 光标始终位于中间位置(若是其他数字，则是光标距离上下边界的行数)
-" set so=999
+" 光标边界位置(999居中，其他数字表示光标距离上下边界的行数)
 set so=5
 
 " 搜索字段时开启实时搜索并定位
 set incsearch "set is
 
-" 显示状态行
+" 状态栏
 set laststatus=2
 
 " 开启256色支持
@@ -194,8 +194,6 @@ let g:instant_markdown_autostart = 1
 " 日历插件
 Plugin 'mattn/calendar-vim'
 nnoremap <Leader>cl :Calendar<cr>
-
-
 
 Plugin 'Lokaltog/vim-powerline'
 set guifont=PowerlineSymbols\ for\ Powerline
