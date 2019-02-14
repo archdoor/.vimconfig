@@ -93,6 +93,9 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+" 去除重复行
+nnoremap <Leader>dc :g/^\(.*\)$\n\1$/d <cr>
+
 
 " ++++++++++++++++++++++++++++插件配置++++++++++++++++++++++++++++++++++++
 " 1.Github vim-script 用户插件：Plugin 'plugin'
@@ -193,7 +196,7 @@ set guifont=PowerlineSymbols\ for\ Powerline
 " let g:Powerline_symbols = 'unicode'
 set noshowmode
 
-if 0
+if 1
 	Plugin 'Valloric/YouCompleteMe'
 	set completeopt=longest,menu
 	let g:ycm_confirm_extra_conf=0
