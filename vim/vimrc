@@ -1,6 +1,8 @@
 let mapleader='\' " 设置mapleader(默认'\')
+colorscheme darkblue " 配色方案
+" colorscheme normal " 配色方案
 
-set fillchars=vert:\  " vim分割线字符(空格)
+set fillchars=vert:\│ " vim分割线字符(空格)
 set nu  " 显示行号
 " set nowrap " 禁止自动换行
 syntax on " 语法高亮
@@ -24,8 +26,6 @@ set foldlevel=99 " 文件第一次打开时为非折叠状态
 set encoding=utf-8 " 设置编码类型
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 set termencoding=utf-8
-
-colorscheme archdoor " 配色方案
 
 if has("autocmd") " 打开文件自动定位到上次编辑位置
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -58,6 +58,9 @@ nnoremap <Leader>wc :% s/<c-r><c-w>/&/gn <cr>
 nnoremap <Leader>aa :A <cr>
 nnoremap <Leader>av :AV <cr>
 nnoremap <Leader>as :AS <cr>
+
+" vimgrep快捷键
+nnoremap <Leader>vg :vimgrep /<c-r><c-w>/gj **/*.c **/*.cpp **/*.h <cr> :cw <cr>
 
 " 删除重复行
 nnoremap <Leader>dc :g/^\(.*\)$\n\1$/d <cr>
@@ -92,7 +95,6 @@ autocmd FileType java,c,cpp set commentstring=//\ %s
 
 Plugin 'jiangmiao/auto-pairs' " 符号配对
 Plugin 'kien/ctrlp.vim' " 文件搜索
-Plugin 'Mark' " 单词高亮
 Plugin 'guns/xterm-color-table.vim' " 终端颜色表
 Plugin 'othree/xml.vim' " XML文档编辑
 Plugin 'mattn/emmet-vim.git' " HTML文档编辑
@@ -132,10 +134,10 @@ let g:tagbar_type_vimwiki = {
 Plugin 'mattn/calendar-vim' " 日历插件
 nnoremap <Leader>cl :Calendar<cr>
 
-Plugin 'Lokaltog/vim-powerline' " 状态栏
-set guifont=PowerlineSymbols\ for\ Powerline
-let g:Powerline_symbols = 'unicode'
-set noshowmode
+" Plugin 'Lokaltog/vim-powerline' " 状态栏
+" set guifont=PowerlineSymbols\ for\ Powerline
+" let g:Powerline_symbols = 'unicode'
+" set noshowmode
 
 Plugin 'Valloric/YouCompleteMe' " 自动补全提示
 set completeopt=longest,menu
