@@ -78,12 +78,15 @@ if version > 580
 endif
 let g:colors_name="darkblue"
 
-hi Normal	ctermfg=28
+" hi Normal	ctermfg=28
+hi Normal	ctermfg=7
 hi LineNr	ctermfg=22
 hi IncSearch	cterm=NONE ctermfg=green ctermbg=64
 hi Search	cterm=NONE ctermfg=34 ctermbg=22
 hi Comment	ctermfg=239
 hi PreProc	ctermfg=27
+hi CursorLine   cterm=underline ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+hi CursorColumn cterm=NONE ctermbg=236 ctermfg=NONE guibg=NONE guifg=NONE
 
 hi SpecialKey	ctermfg=226
 hi Directory	ctermfg=darkcyan
@@ -116,7 +119,6 @@ hi Pmenu	ctermfg=250 ctermbg=22
 hi PmenuSel	ctermfg=250 ctermbg=28
 hi PmenuSbar ctermfg=250 ctermbg=yellow
 hi PmenuThumb ctermfg=250 ctermbg=yellow
-" hi Type		ctermfg=40
 hi Type		ctermfg=127
 hi Underlined	cterm=underline ctermfg=5
 hi Ignore	ctermfg=darkgrey

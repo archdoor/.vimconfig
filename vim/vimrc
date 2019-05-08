@@ -2,6 +2,13 @@ let mapleader='\' " 设置mapleader(默认'\')
 colorscheme darkblue " 配色方案
 " colorscheme normal " 配色方案
 
+" autocmd InsertEnter * se cul
+set cursorline " 光标所在行
+" set cursorcolumn " 光标所在列
+set laststatus=2 " 显示状态栏
+set statusline=%t%m%r%h%w%=%p%%\ [%l,%c]%y[%{&ff}]%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\"+\":\"\").\"]\"}
+
+
 set fillchars=vert:\│ " vim分割线字符(空格)
 set nu  " 显示行号
 " set nowrap " 禁止自动换行
@@ -18,7 +25,6 @@ set smartindent " 依据上面的对齐格式，智能的选择对齐方式
 set so=5 " 光标边界位置(999居中，其他数字表示光标距离上下边界的行数)
 set incsearch  " 搜索字段时开启实时搜索并定位
 set is
-set laststatus=2 " 显示状态栏
 set t_Co=256 " 开启256色支持
 set foldmethod=indent " 代码折叠：按缩进折叠
 set foldlevel=99 " 文件第一次打开时为非折叠状态
@@ -133,11 +139,6 @@ let g:tagbar_type_vimwiki = {
 
 Plugin 'mattn/calendar-vim' " 日历插件
 nnoremap <Leader>cl :Calendar<cr>
-
-" Plugin 'Lokaltog/vim-powerline' " 状态栏
-" set guifont=PowerlineSymbols\ for\ Powerline
-" let g:Powerline_symbols = 'unicode'
-" set noshowmode
 
 Plugin 'Valloric/YouCompleteMe' " 自动补全提示
 set completeopt=longest,menu
