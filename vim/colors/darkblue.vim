@@ -85,8 +85,6 @@ hi IncSearch	cterm=NONE ctermfg=green ctermbg=64
 hi Search	cterm=NONE ctermfg=34 ctermbg=22
 hi Comment	ctermfg=239
 hi PreProc	ctermfg=27
-hi CursorLine   cterm=underline ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
-hi CursorColumn cterm=NONE ctermbg=236 ctermfg=NONE guibg=NONE guifg=NONE
 
 hi SpecialKey	ctermfg=226
 hi Directory	ctermfg=darkcyan

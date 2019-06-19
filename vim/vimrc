@@ -2,12 +2,9 @@ let mapleader='\' " 设置mapleader(默认'\')
 colorscheme darkblue " 配色方案
 " colorscheme normal " 配色方案
 
-" autocmd InsertEnter * se cul
-set cursorline " 光标所在行
-" set cursorcolumn " 光标所在列
+" set cursorline " 光标所在行
 set laststatus=2 " 显示状态栏
 set statusline=%t%m%r%h%w%=%p%%\ [%l,%c]%y[%{&ff}]%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\"+\":\"\").\"]\"}
-
 
 set fillchars=vert:\│ " vim分割线字符(空格)
 set nu  " 显示行号
