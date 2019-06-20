@@ -3,7 +3,7 @@
 let mapleader='\'
 
 " vim分割线字符(空格)
-set fillchars=vert:\ 
+set fillchars=vert:\│ 
 
 " 显示行号 
 set nu 
@@ -194,10 +194,10 @@ nnoremap <Leader>cl :Calendar<cr>
 " 终端颜色表
 Plugin 'guns/xterm-color-table.vim'
 
-Plugin 'Lokaltog/vim-powerline'
-set guifont=PowerlineSymbols\ for\ Powerline
+"Plugin 'Lokaltog/vim-powerline'
+"set guifont=PowerlineSymbols\ for\ Powerline
 " let g:Powerline_symbols = 'unicode'
-set noshowmode
+"set noshowmode
 
 if 1
 	Plugin 'Valloric/YouCompleteMe'
