@@ -1,6 +1,6 @@
 let mapleader='\'		" 设置mapleader(默认'\')
 set nu					" 显示行号 
-set nowrap				" 禁止自动换行
+" set nowrap				" 禁止自动换行
 set fillchars=vert:\│	" vim分割线字符(空格)
 colorscheme darkblue	" 配色方案
 set scrolloff=5			" 光标距离上下边界行数(999:始终位于中间位置)
@@ -20,6 +20,8 @@ set incsearch			" 搜索字段时开启实时搜索并定位(set is)
 
 set autoindent			" 自动对齐，换行时自动和上一行对齐
 set smartindent			" 依据上面的对齐格式，智能的选择对齐方式
+set cindent				" 依据上面的对齐格式，智能的选择对齐方式
+set cinoptions+=g0		" c++缩进，类中的pulibc,private,protect等顶头
 
 set laststatus=2		" 显示状态行
 set statusline=%t%m%r%h%w%=%p%%\ [%l,%c]%y[%{&ff}]%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\"+\":\"\").\"]\"}
