@@ -88,7 +88,6 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#begin()  
 
 Plugin 'gmarik/vundle' 
-Plugin 'Mark' " 单词高亮
 Plugin 'kien/ctrlp.vim' " 文件搜索
 Plugin 'jiangmiao/auto-pairs' " 符号配对
 Plugin 'othree/xml.vim' " XML文档编辑
@@ -142,14 +141,6 @@ let g:tagbar_type_vimwiki = {
           \ , 'ctagsbin':'~/vimwiki/vwtags.py'
           \ , 'ctagsargs': 'default'
           \ } " 利用tagbar生成wiki文件侧边栏目录
-
-" markdown
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'suan/vim-instant-markdown'
-let g:instant_markdown_open_to_the_world = 1
-let g:instant_markdown_allow_unsafe_content = 1
-let g:instant_markdown_autostart = 1
 
 Plugin 'mattn/calendar-vim' " 日历插件
 nnoremap <Leader>cl :Calendar<cr>
