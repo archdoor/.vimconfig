@@ -94,6 +94,7 @@ Plugin 'othree/xml.vim' " XML文档编辑
 Plugin 'mattn/emmet-vim.git' " HTML文档编辑
 Plugin 'Shougo/neocomplcache.vim' " HTML编辑提示
 Plugin 'guns/xterm-color-table.vim' " 终端颜色表
+Plugin 'easymotion/vim-easymotion' " 快速跳转
 
 " 标签显示(首先安装ctags)
 Bundle 'majutsushi/tagbar'
