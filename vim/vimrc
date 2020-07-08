@@ -120,14 +120,17 @@ let NERDTreeQuitOnlpen=0 " 打开文件后是否关闭
 Plugin 'rking/ag.vim' " 单词搜索(首先安装the_silver_searcher, ubuntu安装silversearcher_ag)
 let g:ag_highlight=1
 " 当前文件搜索
-nnoremap <Leader>f :Ag! <c-r><c-w> <c-r>=expand("%:p")<cr>
+nnoremap <Leader>f :Ag! -Q "<c-r><c-w>" <c-r>=expand("%:p")<cr>
 " 当前目录搜索
-nnoremap <Leader>F :Ag! <c-r><c-w>
+nnoremap <Leader>F :Ag! -Q "<c-r><c-w>"
 
 Plugin 'vimwiki/vimwiki' " wiki笔记
 let g:vimwiki_dir_link='index'
 let nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'c': 'c', 'asm': 's'}
-let g:vimwiki_list = [{'path': '~/.vimwiki', 'path_html': '~/.archdoor.github.io', 'css_name': 'css/vimwiki.css', 'auto_toc': 1, 'maxhi': 1}]
+let g:vimwiki_list = [
+			\{'path': '~/.vimwiki', 'path_html': '~/.archdoor.github.io', 'css_name': 'css/vimwiki.css', 'auto_toc': 1, 'maxhi': 1},
+			\{'path': '~/.wiki_work/wiki', 'path_html': '~/.wiki_work', 'css_name': 'css/vimwiki.css', 'auto_toc': 1, 'maxhi': 1},
+			\]
 let g:vimwiki_hl_headers = 1
 let g:vimwiki_toc_header = '目录索引'
 let g:vimwiki_menu = ''
@@ -161,6 +164,7 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 0
 let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_cache_omnifunc=0
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_server_python_interpreter = '/usr/bin/python2'
 nnoremap go :YcmCompleter GoToDefinitionElseDeclaration<cr>
 
 
