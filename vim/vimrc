@@ -95,6 +95,8 @@ Plugin 'mattn/emmet-vim.git' " HTML文档编辑
 Plugin 'Shougo/neocomplcache.vim' " HTML编辑提示
 Plugin 'guns/xterm-color-table.vim' " 终端颜色表
 Plugin 'easymotion/vim-easymotion' " 快速跳转
+Plugin 'godlygeek/tabular' " 文本对齐
+Plugin 'plasticboy/vim-markdown' " markdown语法高亮
 
 " 标签显示(首先安装ctags)
 Bundle 'majutsushi/tagbar'
